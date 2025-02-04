@@ -1,0 +1,6 @@
+Theme: Saving and Adopting Cats
+
+Colors: 
+    primary: #FF7F50 / hover: #FF5722, #FF9800
+    secondary: #6A1B9A
+
