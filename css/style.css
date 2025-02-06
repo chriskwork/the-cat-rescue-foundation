@@ -63,6 +63,8 @@ nav {
     }
 
     /* TODO: menu link hover doesn't work */
+    /* added <a> inside of <li>
+    need to re-style below */
     ul.menus {
         display: flex;
         gap: 20px;
@@ -74,10 +76,6 @@ nav {
             padding: 10px 14px;
             cursor: pointer;
             transition: var(--transition);
-        }
-
-        & > li:hover {
-            color: var(--primary-hover);
         }
 
         li.menu-link {
@@ -93,34 +91,35 @@ nav {
                 font-size: 0.6rem;
             }
         }
-    }
-}
 
-.drop-menu {
-    display: none;
+        .drop-menu {
+            display: none;
+            width: 100%;
 
-    & > li {
-        width: 100%;
-        display: block;
-        list-style: none;
-        text-transform: uppercase;
-        font-size: 0.95rem;
-        padding: 10px 14px;
-        cursor: pointer;
-        transition: var(--transition);
+            li {
+                display: inline-block;
+                list-style: none;
+                text-transform: uppercase;
+                font-size: 0.95rem;
 
-        /* 드롭다운 메뉴 아이템 hover 효과 */
-        &:hover {
-            color: var(--primary-hover);
+                cursor: pointer;
+                transition: var(--transition);
+
+                &:hover {
+                    color: var(--primary-hover);
+                }
+            }
+        }
+
+        .drop-menu.show {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 35px;
+            left: 0;
         }
     }
-}
-
-.drop-menu.show {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 40px;
 }
 
 header .intro {
