@@ -1,10 +1,10 @@
+/* Settings */
 :root {
     --primary-color: #ff7f50;
     --secondary-color: #6a1b9a;
-    /* --primary-hover: #FF5722; */
     --primary-hover: #ff9800;
     --bg-color: #f3f3f3;
-    --transition: 250ms;
+    --transition: 100ms;
     --font-black: #111;
 }
 
@@ -14,6 +14,7 @@
     box-sizing: border-box;
 }
 
+/* Commons */
 .max-container {
     width: 980px;
 }
@@ -43,7 +44,7 @@ header {
     color: #fff;
 }
 
-/* nav */
+/* Nav tag */
 nav {
     width: 100%;
     /* background-color: var(--bg-color); */
@@ -62,9 +63,7 @@ nav {
         width: 100px;
     }
 
-    /* TODO: menu link hover doesn't work */
-    /* added <a> inside of <li>
-    need to re-style below */
+    /* Menu part */
     ul.menus {
         display: flex;
         gap: 20px;
@@ -75,7 +74,16 @@ nav {
             font-size: 0.95rem;
             padding: 10px 14px;
             cursor: pointer;
+            
+        }
+
+        a {
+            display: inline-block;
             transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-hover);
         }
 
         li.menu-link {
@@ -88,20 +96,21 @@ nav {
             gap: 4px;
 
             span {
-                font-size: 0.6rem;
+                font-size: 0.5rem;
             }
         }
 
+        /* Submenu part */
         .drop-menu {
             display: none;
-            width: 100%;
+            min-width: max-content;
+            
 
             li {
-                display: inline-block;
                 list-style: none;
                 text-transform: uppercase;
                 font-size: 0.95rem;
-
+                padding: 4px 14px;
                 cursor: pointer;
                 transition: var(--transition);
 
@@ -112,9 +121,11 @@ nav {
         }
 
         .drop-menu.show {
-            width: 100%;
+            width: 100%;           
             display: flex;
             flex-direction: column;
+            gap: 10px;
+            padding: 16px 0 32px;
             position: absolute;
             top: 35px;
             left: 0;
@@ -122,6 +133,7 @@ nav {
     }
 }
 
+/* Hero section */
 header .intro {
     display: flex;
     flex-direction: column;
