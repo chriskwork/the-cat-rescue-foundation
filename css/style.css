@@ -24,14 +24,14 @@
 }
 
 body {
-    font-family: "Poppins", serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
     background-color: var(--bg-color);
     color: var(--font-black);
 }
 
-header {
+header.main-header {
     background-image: linear-gradient(rgba(106, 27, 154, 0.85), rgba(106, 27, 154, 0.65)), url("../img/main-bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -47,7 +47,6 @@ header {
 /* Nav tag */
 nav {
     width: 100%;
-    /* background-color: var(--bg-color); */
     height: 80px;
     display: flex;
     align-items: center;
@@ -74,30 +73,16 @@ nav {
             font-size: 0.95rem;
             padding: 10px 14px;
             cursor: pointer;
-            
         }
 
-        a {
-            display: inline-block;
-            transition: var(--transition);
-        }
-
-        a:hover {
-            color: var(--primary-hover);
-        }
+        
 
         li.menu-link {
             position: relative;
         }
 
-        li.has-drop-menu {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-
-            span {
-                font-size: 0.5rem;
-            }
+        li.has-drop-menu span {
+            font-size: 0.5rem;
         }
 
         /* Submenu part */
@@ -105,7 +90,6 @@ nav {
             display: none;
             min-width: max-content;
             
-
             li {
                 list-style: none;
                 text-transform: uppercase;
@@ -118,6 +102,7 @@ nav {
                     color: var(--primary-hover);
                 }
             }
+
         }
 
         .drop-menu.show {
@@ -125,13 +110,50 @@ nav {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            padding: 16px 0 32px;
+            padding: 16px 0;
             position: absolute;
             top: 35px;
             left: 0;
         }
+
+        .drop-menu.has-bg {
+            background-color: var(--bg-color);
+        }
     }
+
+    
 }
+
+nav a {
+        display: inline-flex;
+        gap: 4px;
+        align-items: center;
+        transition: var(--transition);
+        text-decoration: none;
+        color: #fff;
+
+}
+
+nav a:hover {
+    color: var(--primary-hover);
+}
+
+
+
+/* Sub menu header style */
+header.sub-menu-header {
+    font-weight: 400;
+
+    a {
+        color: var(--font-black);
+    }
+
+    a:hover {
+        color: var(--primary-hover);
+    }
+
+}
+
 
 /* Hero section */
 header .intro {
@@ -213,6 +235,45 @@ section.actividades {
         }
 
         
+    }
+}
+
+/* Gatos Disponibles page */
+.gatos-disponibles {
+    .gatos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 60px 0;
+
+        .gato {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            h4 {
+               text-align: center; 
+            }
+
+            .desc-container {
+                padding: 10px 20px 20px;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 0.88rem;
+            }
+
+            span {
+                font-weight: 500;
+            }
+        }
     }
 }
 
