@@ -3,6 +3,7 @@
   --primary-color: #ff7f50;
   --secondary-color: #6a1b9a;
   --primary-hover: #ff9800;
+  --secondary-hover: #8e24aa;
   --bg-color: #f3f3f3;
   --transition: 100ms;
   --font-black: #111;
@@ -285,7 +286,7 @@ section.newsletter {
       div.adoptado-tag {
         display: inline-block;
         position: absolute;
-        top: 52%;
+        top: 49%;
         right: 14px;
         width: max-content;
         padding: 4px 12px;
@@ -308,6 +309,26 @@ section.newsletter {
 
       span {
         font-weight: 500;
+      }
+
+      .adoptar-btn {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        background-color: var(--secondary-color);
+        color: #fff;
+        padding: 4px 8px;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: var(--transition);
+
+        &:hover {
+          background-color: var(--secondary-hover);
+        }
       }
     }
   }
