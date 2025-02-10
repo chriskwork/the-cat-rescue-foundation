@@ -275,23 +275,11 @@ section.newsletter {
       border: 1px solid #ddd;
       border-radius: 4px;
       overflow: hidden;
-      position: relative;
 
       img {
         width: 100%;
         margin-bottom: 10px;
         text-align: center;
-      }
-
-      div.adoptado-tag {
-        display: inline-block;
-        position: absolute;
-        top: 49%;
-        right: 14px;
-        width: max-content;
-        padding: 4px 12px;
-        background-color: var(--primary-color);
-        font-size: 0.85rem;
       }
 
       h4 {
@@ -329,6 +317,11 @@ section.newsletter {
         &:hover {
           background-color: var(--secondary-hover);
         }
+      }
+
+      .adoptar-btn.adoptado {
+        background-color: var(--primary-color);
+        cursor: not-allowed;
       }
     }
   }
