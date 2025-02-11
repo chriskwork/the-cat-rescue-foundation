@@ -250,15 +250,42 @@ section.newsletter {
       }
     }
 
+    & > div {
+      display: flex;
+      gap: 10px;
+    }
+
     input[type="email"] {
       border: 0;
       padding: 8px 16px;
       border-radius: 8px;
+      width: 80%;
       height: 40px;
+
+      &::placeholder {
+        color: #c4c4c4;
+      }
     }
 
-    input::placeholder {
-      color: #c4c4c4;
+    input[type="submit"] {
+      border: 0;
+      padding: 8px 16px;
+      border-radius: 8px;
+      background-color: var(--secondary-color);
+      color: #fff;
+      cursor: pointer;
+      transition: var(--transition);
+      text-transform: uppercase;
+
+      &::after {
+        content: "Enviar";
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      &:hover {
+        background-color: var(--secondary-hover);
+      }
     }
   }
 }
